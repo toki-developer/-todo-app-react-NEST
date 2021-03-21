@@ -25,6 +25,7 @@ export class ItemController {
   // `item`のURIへのPOSTメソッドでデータ新規登録．
   @Post()
   async addItem(@Body() item: CreateItemDTO): Promise<InsertResult> {
+    console.log(item);
     return await this.service.create(item);
   }
 
