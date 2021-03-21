@@ -19,7 +19,7 @@ http://localhost:3000/item/{id}
 http://localhost:3000/item -X POST -d "todo={todo}&limit={limit}"
 
 データ更新
-http://localhost:3000/item/2/update -X PUT -d "todo={todo}&limit={limit}"
+http://localhost:3000/item/{id}/update -X PUT -d "todo={todo}&limit={limit}"
 
 データ削除
-http://localhost:3000/item/1/delete -X DELETE
+http://localhost:3000/item/{id}/delete -X DELETE
