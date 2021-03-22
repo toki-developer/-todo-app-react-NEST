@@ -12,9 +12,6 @@ https://github.com/tokio-k/todo-app-REACT-nest
 データ全件呼び出し
 http://localhost:3000/item
 
-データ 1 件検索
-http://localhost:3000/item/{id}
-
 データ新規追加
 http://localhost:3000/item -X POST -d "todo={todo}&limit={limit}"
 
