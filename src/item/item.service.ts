@@ -21,11 +21,6 @@ export class ItemService {
     return await this.itemRepository.insert(item);
   }
 
-  // idを指定してテーブルから1件のデータを取得する関数を定義
-  async find(id: number): Promise<Item> | null {
-    return await this.itemRepository.findOne({ id: id });
-  }
-
   // idを指定してテーブルのデータを更新する関数を定義
   async update(id: number, item): Promise<UpdateResult> {
     return await this.itemRepository.update(id, item);

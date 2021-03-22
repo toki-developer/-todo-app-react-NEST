@@ -29,25 +29,13 @@ export class ItemController {
     return await this.service.create(item);
   }
 
-  // `item/id番号`のURIへのGETメソッドでid指定で1件データ取得．
-  @Get(':id')
-  async getItem(@Param('id') id: string): Promise<Item> {
-    return await this.service.find(Number(id));
-  }
-
   // `item/id番号/update`のURIにPUTメソッドで指定したデータの更新を実行．
   @Put(':id/update')
   async update(
     @Param('id') id: string,
     @Body() itemData: UpdateItemDTO,
   ): Promise<UpdateResult> {
-    const newData = !itemData.isDone
-      ? itemData
-      : {
-          ...itemData,
-          ...{ isDone: itemData.isDone.toLowerCase() === 'true' },
-        };
-    return await this.service.update(Number(id), newData);
+    return await this.service.update(Number(id), itemData);
   }
 
   // パスワードなしで即削除する処理（動作確認用）
