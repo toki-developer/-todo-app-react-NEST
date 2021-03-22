@@ -23,6 +23,5 @@ export class UpdateItemDTO {
 
   @IsOptional()
   @IsNotEmpty()
-  @IsString()
-  isDone: string;
+  isDone: boolean;
 }
