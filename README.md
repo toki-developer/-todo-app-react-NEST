@@ -35,20 +35,23 @@ http://localhost:3000
 - sqlite
 - class-validator
 
-* データ全件呼び出し
+API
+
+- データ全件呼び出し
+
   http://localhost:3000/item
 
-* データ新規追加
-  http://localhost:3000/item
+- データ新規追加
 
--X POST -d "todo={todo}&limit={limit}"
+  http://localhost:3000/item
+  -X POST -d "todo={todo}&limit={limit}"
 
 - データ更新
-  http://localhost:3000/item/{id}/update
 
--X PUT -d "todo={todo}&limit={limit}&isDone={isDone}"
+  http://localhost:3000/item/{id}/update
+  -X PUT -d "todo={todo}&limit={limit}&isDone={isDone}"
 
 - データ削除
-  http://localhost:3000/item/{id}/delete
 
--X DELETE
+  http://localhost:3000/item/{id}/delete
+  -X DELETE
